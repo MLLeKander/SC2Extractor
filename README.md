@@ -3,12 +3,6 @@
 This project extracts information from StarCraft 2 replay files into a more digestable CSV format.
 This creates the following files:
 
-    def handleCommandEvent(self, event, replay):
-        self.incrementActionCount(event, replay, 1)
-    def handleSelectionEvent(self, event, replay):
-        self.incrementActionCount(event, replay, 2)
-    def handleControlGroupEvent(self, event, replay):
-        self.incrementActionCount(event, replay, 3)
  - **actionCount.csv**: A log of all actions performed by both players during the game, grouped according to action type (1: command event, 2: selection event, 3: control group event).
  - **camera.csv**: A log of all camera movements by both players.
  - **injectAction.csv**: A log of each time an inject action was issued (for Zerg players only).
@@ -20,7 +14,7 @@ Only parses Heart of the Swarm replays.
 
 ## Installation
 
-Requires sc2reader:
+Requires sc2reader (version from ggtracker is recommended, as the GralinKim repository has not been updated for years):
 
 ```
 sudo -H pip install git+https://github.com/ggtracker/sc2reader
